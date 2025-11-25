@@ -1,0 +1,304 @@
+[gd_scene load_steps=22 format=3 uid="uid://cxf4tkkil67t1"]
+
+[ext_resource type="Script" uid="uid://0nk0271446j5" path="res://scene_mannager.gd" id="1_07t30"]
+[ext_resource type="Script" uid="uid://8ufmig1sly0u" path="res://bacground_animation.gd" id="1_t63de"]
+[ext_resource type="Texture2D" uid="uid://wd8l4rrkoeng" path="res://ui/satelity_image326.png" id="1_x5siv"]
+[ext_resource type="Theme" uid="uid://lhol0n1nogau" path="res://app_theme.tres" id="1_ydg44"]
+[ext_resource type="Texture2D" uid="uid://bweulsvqfnerc" path="res://ui/satelity_g325.png" id="2_60lt4"]
+[ext_resource type="Script" uid="uid://bwe5hbdbvd8c4" path="res://mision_select.gd" id="2_ddefo"]
+[ext_resource type="Texture2D" uid="uid://d15ah6ssh1b20" path="res://ui/satelity_g321.png" id="2_ikd5e"]
+[ext_resource type="Texture2D" uid="uid://bgkwq2npjyr7a" path="res://ui/satelity_image125.png" id="2_svw77"]
+[ext_resource type="Texture2D" uid="uid://c3om0hq17rftf" path="res://ui/rect558.png" id="3_xcexr"]
+[ext_resource type="Texture2D" uid="uid://ddesnushqiw4n" path="res://ui/satelity_g322.png" id="4_2hpig"]
+[ext_resource type="Texture2D" uid="uid://beyxeeua0uwyg" path="res://ui/rect559.png" id="4_bew2h"]
+[ext_resource type="Texture2D" uid="uid://bogqgwe010plt" path="res://ui/satelity_g323.png" id="5_sxcc4"]
+[ext_resource type="Texture2D" uid="uid://dshgphsi6yepj" path="res://ui/satelity_g324.png" id="6_jitrj"]
+[ext_resource type="Texture2D" uid="uid://yswiefledxcc" path="res://ui/satelity_g326.png" id="8_v3qtd"]
+[ext_resource type="Script" uid="uid://bhkhlaotnpsnq" path="res://rezDisplay.gd" id="13_xcexr"]
+[ext_resource type="Texture2D" uid="uid://dbiraw68r570l" path="res://satBuilder/satGame_g102_satBuild.png" id="16_kow25"]
+[ext_resource type="Texture2D" uid="uid://l1eqedwmntpp" path="res://satBuilder/satGame_path242-2_satBuild.png" id="17_ay1ce"]
+[ext_resource type="Texture2D" uid="uid://b7kymayxc47c1" path="res://satBuilder/satGame_path243-7_satBuild.png" id="18_rcnnr"]
+[ext_resource type="Texture2D" uid="uid://dpyibxup1eh1p" path="res://satBuilder/satGame_path244-0_satBuild.png" id="19_pa4lm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kow25"]
+bg_color = Color(1, 1, 1, 0.243137)
+
+[sub_resource type="Theme" id="Theme_ay1ce"]
+Panel/styles/panel = SubResource("StyleBoxFlat_kow25")
+
+[node name="MainNode" type="Node2D"]
+
+[node name="Game" type="CanvasLayer" parent="."]
+script = ExtResource("1_07t30")
+
+[node name="EnterScreen" type="Control" parent="Game"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Game/EnterScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 165.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 120
+text = "SATELITY
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Game/EnterScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.646
+anchor_right = 0.6
+anchor_bottom = 0.785
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "[CZ]"
+
+[node name="ModeSelect" type="Control" parent="Game"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Game/ModeSelect"]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/ModeSelect/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Pos" type="TextureButton" parent="Game/ModeSelect/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_xcexr")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_Vys" type="TextureButton" parent="Game/ModeSelect/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_bew2h")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MisionSelect" type="Control" parent="Game" node_paths=PackedStringArray("butt_fir", "butt_far", "butt_gps", "butt_rad", "butt_poc", "butt_sat")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ddefo")
+butt_fir = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Fir")
+butt_far = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Far")
+butt_gps = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Gps")
+butt_rad = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Rad")
+butt_poc = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Poc")
+butt_sat = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Sat")
+
+[node name="Container" type="Control" parent="Game/MisionSelect"]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/MisionSelect/Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Game/MisionSelect/Container/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 80
+text = "Vyber misi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/MisionSelect/Container/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button_M_Fir" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("2_ikd5e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Far" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("4_2hpig")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Gps" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("5_sxcc4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Rad" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("6_jitrj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Poc" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("2_60lt4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Sat" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("8_v3qtd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SateliteBuilder" type="Control" parent="Game"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Game/SateliteBuilder"]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 0.35
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Game/SateliteBuilder/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ay1ce")
+
+[node name="RocketBuilder" type="Node" parent="Game"]
+
+[node name="Label" type="Label" parent="Game"]
+anchors_preset = -1
+anchor_right = 0.119
+anchor_bottom = 0.039
+offset_right = -188.48
+offset_bottom = -19.12
+theme_override_font_sizes/font_size = 30
+text = "rez: 4000 x 4000"
+script = ExtResource("13_xcexr")
+
+[node name="Bacground" type="Node" parent="." node_paths=PackedStringArray("mainBcg_sprite", "satelite_sprite")]
+script = ExtResource("1_t63de")
+mainBcg_sprite = NodePath("BCG")
+satelite_sprite = NodePath("Satelite")
+bcg_x_pos = Vector2(700, 1200)
+bcg_y_pos = Vector2(410, 690)
+sat_x_pos = Vector2(1600, 2100)
+sat_y_pos = Vector2(50, 600)
+
+[node name="BCG" type="Sprite2D" parent="Bacground"]
+position = Vector2(756, 656)
+texture = ExtResource("1_x5siv")
+
+[node name="Satelite" type="Sprite2D" parent="Bacground"]
+visible = false
+position = Vector2(1923, 80)
+scale = Vector2(1.62281, 1.62281)
+texture = ExtResource("2_svw77")
+
+[node name="SateliteBuilder" type="Node" parent="."]
+
+[node name="SatGameG102SatBuild" type="Sprite2D" parent="SateliteBuilder"]
+position = Vector2(1612, 530)
+texture = ExtResource("16_kow25")
+
+[node name="SatGamePath242-2SatBuild" type="Sprite2D" parent="SateliteBuilder"]
+position = Vector2(1109, 555)
+texture = ExtResource("17_ay1ce")
+
+[node name="SatGamePath243-7SatBuild" type="Sprite2D" parent="SateliteBuilder/SatGamePath242-2SatBuild"]
+position = Vector2(-274, -21)
+texture = ExtResource("18_rcnnr")
+
+[node name="SatGamePath244-0SatBuild" type="Sprite2D" parent="SateliteBuilder/SatGamePath242-2SatBuild"]
+position = Vector2(-85, -233)
+texture = ExtResource("19_pa4lm")
+
+[node name="hexes" type="Node2D" parent="SateliteBuilder"]
+position = Vector2(1108, 179)
+
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Fir" to="Game/MisionSelect" method="_on_button_m_fir_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Fir" to="Game/MisionSelect" method="_on_button_m_fir_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Far" to="Game/MisionSelect" method="_on_button_m_far_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Far" to="Game/MisionSelect" method="_on_button_m_far_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Gps" to="Game/MisionSelect" method="_on_button_m_gps_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Gps" to="Game/MisionSelect" method="_on_button_m_gps_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Rad" to="Game/MisionSelect" method="_on_button_m_rad_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Rad" to="Game/MisionSelect" method="_on_button_m_rad_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Poc" to="Game/MisionSelect" method="_on_button_m_poc_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Poc" to="Game/MisionSelect" method="_on_button_m_poc_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Sat" to="Game/MisionSelect" method="_on_button_m_sat_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Sat" to="Game/MisionSelect" method="_on_button_m_sat_mouse_exited"]
