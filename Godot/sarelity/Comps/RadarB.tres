@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://cxrp5gu60t5rh"]
+
+[ext_resource type="Texture2D" uid="uid://ba3rajllj2c8g" path="res://satBuilder/satGame_g84_satBuild.png" id="1_jrtlt"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_npmpf"]
+
+[resource]
+script = ExtResource("1_npmpf")
+size = 1
+EnergyConsumption = 1
+icon = ExtResource("1_jrtlt")
+ID = 9
+name = "Radar"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

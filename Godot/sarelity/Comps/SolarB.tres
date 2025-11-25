@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://2owbk565iycq"]
+
+[ext_resource type="Texture2D" uid="uid://dcrsmxqgg33jf" path="res://satBuilder/satGame_g47_satBuild.png" id="1_b78pw"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_h4xb5"]
+
+[resource]
+script = ExtResource("1_h4xb5")
+location = 1
+size = 1
+EnergyCreation = 2
+icon = ExtResource("1_b78pw")
+ID = 12
+name = "Solární panel"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

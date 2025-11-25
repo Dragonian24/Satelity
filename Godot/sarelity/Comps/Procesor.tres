@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://6h7jcimxadxr"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_8mesl"]
+[ext_resource type="Texture2D" uid="uid://knrqks8t0jng" path="res://satBuilder/satGame_path80_satBuild.png" id="1_cnhdd"]
+
+[resource]
+script = ExtResource("1_8mesl")
+size = 1
+EnergyConsumption = 1
+icon = ExtResource("1_cnhdd")
+ID = 7
+name = "Výpočetní jednotka"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

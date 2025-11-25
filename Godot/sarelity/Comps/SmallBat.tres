@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://dxoqbnpby78d7"]
+
+[ext_resource type="Texture2D" uid="uid://co4g0icatcgnd" path="res://satBuilder/satGame_path65_satBuild.png" id="1_lmkb2"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_sxfhw"]
+
+[resource]
+script = ExtResource("1_sxfhw")
+size = 1
+EnergyStorage = 1
+icon = ExtResource("1_lmkb2")
+ID = 10
+name = "Malá baterie"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

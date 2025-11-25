@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://rw3ocanhss16"]
+
+[ext_resource type="Texture2D" uid="uid://b7osfldawsdo4" path="res://satBuilder/satGame_g82_satBuild.png" id="1_e374u"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="2_iaxm8"]
+
+[resource]
+script = ExtResource("2_iaxm8")
+size = 1
+EnergyConsumption = 1
+icon = ExtResource("1_e374u")
+ID = 4
+name = "Výpočetní paměť"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

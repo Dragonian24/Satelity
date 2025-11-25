@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://btslloccpoynn"]
+
+[ext_resource type="Texture2D" uid="uid://d016xmslsguf7" path="res://satBuilder/satGame_g99_satBuild.png" id="1_jj71e"]
+[ext_resource type="Script" uid="uid://boipvecjjjgd2" path="res://inside_panel_picker.gd" id="2_jj71e"]
+[ext_resource type="Texture2D" uid="uid://ba3rajllj2c8g" path="res://satBuilder/satGame_g84_satBuild.png" id="3_jj71e"]
+[ext_resource type="Texture2D" uid="uid://b44xykncsgr2s" path="res://satBuilder/satGame_g42_satBuild.png" id="3_pgvcn"]
+[ext_resource type="Texture2D" uid="uid://cc6rcryfmvr4m" path="res://satBuilder/satGame_rect782-3_satBuild.png" id="4_jj71e"]
+
+[node name="InsidePanelPicker" type="Sprite2D"]
+texture = ExtResource("1_jj71e")
+script = ExtResource("2_jj71e")
+
+[node name="PanelIn" type="Node2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="PanelIn"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-3.0000005, -12)
+scale = Vector2(0.69406515, 0.69406515)
+texture = ExtResource("3_jj71e")
+
+[node name="SizeIconBig" type="Sprite2D" parent="PanelIn"]
+position = Vector2(107, 0)
+texture = ExtResource("3_pgvcn")
+
+[node name="SizeIconSmall" type="Sprite2D" parent="PanelIn"]
+position = Vector2(107, 1)
+texture = ExtResource("4_jj71e")
+
+[node name="NameTag" type="Label" parent="PanelIn"]
+offset_left = -108.0
+offset_top = 17.0
+offset_right = 107.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "satelit"
+horizontal_alignment = 1
+
+[node name="Hitbox" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 0.98800004
+anchor_bottom = 0.96900004
+offset_left = -171.0
+offset_top = -49.0
+offset_right = -171.87201
+offset_bottom = -48.962006

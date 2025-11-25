@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://c4mnuqrinft30"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_gydtt"]
+[ext_resource type="Texture2D" uid="uid://bx63e0ba7s57y" path="res://satBuilder/satGame_path46_satBuild.png" id="1_q6wi8"]
+
+[resource]
+script = ExtResource("1_gydtt")
+location = 1
+size = 1
+icon = ExtResource("1_q6wi8")
+ID = 1
+name = "Anténa"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

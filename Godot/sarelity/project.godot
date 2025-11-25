@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor]
+
+movie_writer/movie_file="C:/Users/klarka/Documents/github/Satelity/Godot/sarelity/test.avi"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://kaaa8jdgbdrl"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_gwyjk"]
+[ext_resource type="Texture2D" uid="uid://dr2n8rffa5nll" path="res://satBuilder/satGame_path64_satBuild.png" id="1_mngar"]
+
+[resource]
+script = ExtResource("1_gwyjk")
+size = 1
+EnergyConsumption = 1
+icon = ExtResource("1_mngar")
+ID = 5
+name = "Řídící jednotka"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

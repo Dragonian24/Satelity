@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://b8nensi74jsqj"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_idtpb"]
+[ext_resource type="Texture2D" uid="uid://d4hri8lt0yq7w" path="res://satBuilder/satGame_path66_satBuild.png" id="1_j167i"]
+
+[resource]
+script = ExtResource("1_idtpb")
+size = 2
+EnergyStorage = 2
+icon = ExtResource("1_j167i")
+ID = 3
+name = "Velká baterie"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

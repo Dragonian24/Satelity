@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://2q1n47dga27m"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_013rr"]
+[ext_resource type="Texture2D" uid="uid://dlgpw80l14sim" path="res://satBuilder/satGame_path81_satBuild.png" id="1_ona2e"]
+
+[resource]
+script = ExtResource("1_013rr")
+size = 2
+EnergyConsumption = 2
+icon = ExtResource("1_ona2e")
+ID = 2
+name = "Atomové Hodiny"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

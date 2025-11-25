@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://djqpcsofuaxfa"]
+
+[ext_resource type="Texture2D" uid="uid://cwep536bsn7m6" path="res://satBuilder/satGame_path44_satBuild.png" id="1_afr1c"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_p87oj"]
+
+[resource]
+script = ExtResource("1_p87oj")
+location = 1
+size = 1
+icon = ExtResource("1_afr1c")
+ID = 6
+name = "Multispektrální kamera"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"

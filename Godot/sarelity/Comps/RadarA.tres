@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Component" load_steps=3 format=3 uid="uid://cldkchlust5tk"]
+
+[ext_resource type="Texture2D" uid="uid://bankljwg5s60d" path="res://satBuilder/satGame_path42_satBuild.png" id="1_8roat"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_tx0vp"]
+
+[resource]
+script = ExtResource("1_tx0vp")
+location = 1
+size = 1
+icon = ExtResource("1_8roat")
+ID = 8
+name = "Radarová anténa"
+metadata/_custom_type_script = "uid://cxrma0bgxai16"
