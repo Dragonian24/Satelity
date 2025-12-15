@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_sxfhw")
 size = 1
-EnergyStorage = 1
+EnergyStorage = 2
 icon = ExtResource("1_lmkb2")
 ID = 10
 name = "Malá baterie"

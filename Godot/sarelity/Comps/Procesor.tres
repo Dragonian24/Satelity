@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_8mesl")
 size = 1
-EnergyConsumption = 1
+EnergyConsumption = 2
 icon = ExtResource("1_cnhdd")
 ID = 7
 name = "Výpočetní jednotka"

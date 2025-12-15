@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=8 format=3 uid="uid://bparlervt5i0j"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_tyc66"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="2_dmk1b"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="2_u2p70"]
+[ext_resource type="Resource" uid="uid://chid7wthp51xu" path="res://Comps/Termocam.tres" id="3_85fo7"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="4_3lv3f"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="5_upups"]
+[ext_resource type="Resource" uid="uid://djqpcsofuaxfa" path="res://Comps/MultiCam.tres" id="6_yjgi4"]
+
+[resource]
+script = ExtResource("2_u2p70")
+name = "Snímkování povrchu"
+info = "Vytvoř satelit pro detailní snímkování povrchu Země."
+neededComps = Array[ExtResource("1_tyc66")]([ExtResource("4_3lv3f"), ExtResource("5_upups"), ExtResource("6_yjgi4")])
+additionalComps = Array[ExtResource("1_tyc66")]([ExtResource("2_dmk1b"), ExtResource("3_85fo7")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"

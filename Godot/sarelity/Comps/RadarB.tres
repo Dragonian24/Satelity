@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_npmpf")
 size = 1
-EnergyConsumption = 1
+EnergyConsumption = 3
 icon = ExtResource("1_jrtlt")
 ID = 9
 name = "Radar"

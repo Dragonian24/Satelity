@@ -7,7 +7,7 @@
 script = ExtResource("1_h4xb5")
 location = 1
 size = 1
-EnergyCreation = 2
+EnergyCreation = 3
 icon = ExtResource("1_b78pw")
 ID = 12
 name = "Solární panel"

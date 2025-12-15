@@ -1,0 +1,1097 @@
+[gd_scene load_steps=63 format=3 uid="uid://cxf4tkkil67t1"]
+
+[ext_resource type="Script" uid="uid://0nk0271446j5" path="res://scene_mannager.gd" id="1_07t30"]
+[ext_resource type="Script" uid="uid://8ufmig1sly0u" path="res://bacground_animation.gd" id="1_t63de"]
+[ext_resource type="Texture2D" uid="uid://wd8l4rrkoeng" path="res://ui/satelity_image326.png" id="1_x5siv"]
+[ext_resource type="Theme" uid="uid://lhol0n1nogau" path="res://app_theme.tres" id="1_ydg44"]
+[ext_resource type="Texture2D" uid="uid://bweulsvqfnerc" path="res://ui/satelity_g325.png" id="2_60lt4"]
+[ext_resource type="Script" uid="uid://bwe5hbdbvd8c4" path="res://mision_select.gd" id="2_ddefo"]
+[ext_resource type="Texture2D" uid="uid://d15ah6ssh1b20" path="res://ui/satelity_g321.png" id="2_ikd5e"]
+[ext_resource type="Texture2D" uid="uid://bgkwq2npjyr7a" path="res://ui/satelity_image125.png" id="2_svw77"]
+[ext_resource type="Texture2D" uid="uid://c3om0hq17rftf" path="res://ui/rect558.png" id="3_xcexr"]
+[ext_resource type="Texture2D" uid="uid://ddesnushqiw4n" path="res://ui/satelity_g322.png" id="4_2hpig"]
+[ext_resource type="Texture2D" uid="uid://beyxeeua0uwyg" path="res://ui/rect559.png" id="4_bew2h"]
+[ext_resource type="Texture2D" uid="uid://bogqgwe010plt" path="res://ui/satelity_g323.png" id="5_sxcc4"]
+[ext_resource type="Texture2D" uid="uid://dshgphsi6yepj" path="res://ui/satelity_g324.png" id="6_jitrj"]
+[ext_resource type="Texture2D" uid="uid://yswiefledxcc" path="res://ui/satelity_g326.png" id="8_v3qtd"]
+[ext_resource type="Texture2D" uid="uid://c3ayvg1s305vd" path="res://satBuilder/satGame_g41_satBuild.png" id="12_d5txl"]
+[ext_resource type="Script" uid="uid://dytcoktn8piqo" path="res://comp_lib.gd" id="13_ay1ce"]
+[ext_resource type="Texture2D" uid="uid://b47sw50dpbhdw" path="res://satBuilder/satGame_g104_satBuild.png" id="13_jdmr4"]
+[ext_resource type="Script" uid="uid://bhkhlaotnpsnq" path="res://rezDisplay.gd" id="13_xcexr"]
+[ext_resource type="Texture2D" uid="uid://c7j5m8u6i78dh" path="res://satBuilder/satGame_g22_satBuild.png" id="14_cqoaj"]
+[ext_resource type="Texture2D" uid="uid://cq2xnk51w5oj2" path="res://satBuilder/satGame_rect626-2-7_satBuild.png" id="15_dfdmh"]
+[ext_resource type="Texture2D" uid="uid://cnt1ul4woxp2v" path="res://satBuilder/satGame_rect103-1_satBuild.png" id="16_dpwfp"]
+[ext_resource type="Texture2D" uid="uid://dbiraw68r570l" path="res://satBuilder/satGame_g102_satBuild.png" id="16_kow25"]
+[ext_resource type="Script" uid="uid://du1ea1gnxtaxx" path="res://main_text.gd" id="17_3w8c3"]
+[ext_resource type="Texture2D" uid="uid://o2eflanq06nf" path="res://satBuilder/satGame_g24_satBuild.png" id="17_ju07r"]
+[ext_resource type="Texture2D" uid="uid://cb366xifqamkg" path="res://satBuilder/satGame_g25_satBuild.png" id="18_mmfdq"]
+[ext_resource type="PackedScene" uid="uid://btslloccpoynn" path="res://inside_panel_picker.tscn" id="18_rcnnr"]
+[ext_resource type="Texture2D" uid="uid://c1r6aocggx2m5" path="res://satBuilder/satGame_g103_satBuild.png" id="20_2i728"]
+[ext_resource type="Texture2D" uid="uid://nb2y6falkeur" path="res://satBuilder/path599-1.png" id="21_0noyg"]
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="21_wct6h"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="22_rq8wd"]
+[ext_resource type="Resource" uid="uid://2q1n47dga27m" path="res://Comps/AtomicClock.tres" id="23_1jgt1"]
+[ext_resource type="Resource" uid="uid://b8nensi74jsqj" path="res://Comps/BigBat.tres" id="24_2fjmt"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="25_hqm0r"]
+[ext_resource type="PackedScene" uid="uid://br072d6yd3w21" path="res://outside_module_picker.tscn" id="26_3diua"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="26_vg3yx"]
+[ext_resource type="Texture2D" uid="uid://tuf0lyo8ryh1" path="res://satBuilder/satGame_g30_satBuild.png" id="27_dpwfp"]
+[ext_resource type="Texture2D" uid="uid://d31r7mc4ppioo" path="res://satBuilder/satGame_rect315-9-7-0_satBuild.png" id="27_mmfdq"]
+[ext_resource type="Resource" uid="uid://djqpcsofuaxfa" path="res://Comps/MultiCam.tres" id="27_tr0de"]
+[ext_resource type="Resource" uid="uid://6h7jcimxadxr" path="res://Comps/Procesor.tres" id="28_d5txl"]
+[ext_resource type="Texture2D" uid="uid://ba3rajllj2c8g" path="res://satBuilder/satGame_g84_satBuild.png" id="28_i4us1"]
+[ext_resource type="Texture2D" uid="uid://bqbj177frnal6" path="res://satBuilder/satGame_g29_satBuild.png" id="28_ju07r"]
+[ext_resource type="Resource" uid="uid://cldkchlust5tk" path="res://Comps/RadarA.tres" id="29_jdmr4"]
+[ext_resource type="Texture2D" uid="uid://cuaqt40le3ggo" path="res://satBuilder/satGame_g28_satBuild.png" id="29_mmfdq"]
+[ext_resource type="Resource" uid="uid://cxrp5gu60t5rh" path="res://Comps/RadarB.tres" id="30_cqoaj"]
+[ext_resource type="Texture2D" uid="uid://bmcwn34dt14ru" path="res://satBuilder/satGame_path27_satBuild.png" id="30_i4us1"]
+[ext_resource type="Resource" uid="uid://dxoqbnpby78d7" path="res://Comps/SmallBat.tres" id="31_dfdmh"]
+[ext_resource type="Resource" uid="uid://b2i6tp6kjhsqu" path="res://Comps/SolarA.tres" id="32_dpwfp"]
+[ext_resource type="Texture2D" uid="uid://l1eqedwmntpp" path="res://satBuilder/satGame_path242-2_satBuild.png" id="33_g56xo"]
+[ext_resource type="Resource" uid="uid://2owbk565iycq" path="res://Comps/SolarB.tres" id="33_ju07r"]
+[ext_resource type="Resource" uid="uid://c5l8b7ldo2lbw" path="res://Comps/SpektroCam.tres" id="34_mmfdq"]
+[ext_resource type="Texture2D" uid="uid://doslg6u1kxypj" path="res://satBuilder/satGame_g105_satBuild.png" id="34_prg8c"]
+[ext_resource type="Script" uid="uid://cm35pvv7xtovl" path="res://side_panel.gd" id="35_2upmk"]
+[ext_resource type="Resource" uid="uid://chid7wthp51xu" path="res://Comps/Termocam.tres" id="35_i4us1"]
+[ext_resource type="Script" uid="uid://bn8tq40a13n8r" path="res://rotation_manager.gd" id="35_prg8c"]
+[ext_resource type="Texture2D" uid="uid://dm64005on8ysq" path="res://satBuilder/satGame_g26_satBuild.png" id="36_1jkgm"]
+[ext_resource type="Texture2D" uid="uid://uu8v6qqfy6go" path="res://satBuilder/satGame_g106_satBuild.png" id="36_f7xtl"]
+[ext_resource type="Texture2D" uid="uid://dcrsmxqgg33jf" path="res://satBuilder/satGame_g47_satBuild.png" id="37_hhmga"]
+[ext_resource type="Script" uid="uid://dfl43eb3fje21" path="res://drag_drop_manager.gd" id="38_gk6wh"]
+[ext_resource type="Script" uid="uid://c8o03qj6j8lwe" path="res://mouse_follow.gd" id="41_7beed"]
+[ext_resource type="Resource" uid="uid://do0kyq5dgyb00" path="res://Comps/Empty.tres" id="57_hhmga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kow25"]
+bg_color = Color(1, 1, 1, 0.243137)
+
+[sub_resource type="Theme" id="Theme_ay1ce"]
+Panel/styles/panel = SubResource("StyleBoxFlat_kow25")
+
+[node name="MainNode" type="Node2D"]
+
+[node name="Game" type="CanvasLayer" parent="."]
+script = ExtResource("1_07t30")
+
+[node name="EnterScreen" type="Control" parent="Game"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Game/EnterScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 165.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 120
+text = "SATELITY
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Game/EnterScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.646
+anchor_right = 0.6
+anchor_bottom = 0.785
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "[CZ]"
+
+[node name="ModeSelect" type="Control" parent="Game"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Game/ModeSelect"]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/ModeSelect/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Pos" type="TextureButton" parent="Game/ModeSelect/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_xcexr")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_Vys" type="TextureButton" parent="Game/ModeSelect/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_bew2h")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MisionSelect" type="Control" parent="Game" node_paths=PackedStringArray("butt_fir", "butt_far", "butt_gps", "butt_rad", "butt_poc", "butt_sat")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ddefo")
+butt_fir = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Fir")
+butt_far = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Far")
+butt_gps = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Gps")
+butt_rad = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Rad")
+butt_poc = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Poc")
+butt_sat = NodePath("Container/HBoxContainer/VBoxContainer/Button_M_Sat")
+
+[node name="Container" type="Control" parent="Game/MisionSelect"]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/MisionSelect/Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Game/MisionSelect/Container/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 80
+text = "Vyber misi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/MisionSelect/Container/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button_M_Fir" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("2_ikd5e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Far" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("4_2hpig")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Gps" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("5_sxcc4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Rad" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("6_jitrj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Poc" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("2_60lt4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_M_Sat" type="TextureButton" parent="Game/MisionSelect/Container/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 7
+texture_normal = ExtResource("8_v3qtd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SateliteBuilder" type="Control" parent="Game"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="Game/SateliteBuilder"]
+layout_mode = 1
+anchor_top = 0.1
+anchor_right = 0.35
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Game/SateliteBuilder/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ay1ce")
+
+[node name="display" type="TextureRect" parent="Game/SateliteBuilder/Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.08800001
+anchor_right = 0.85300004
+anchor_bottom = 0.42700002
+offset_top = 54.967995
+offset_right = -208.216
+offset_bottom = -13.928009
+scale = Vector2(1.5429605, 1.3059691)
+texture = ExtResource("12_d5txl")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Game/SateliteBuilder/Control/Panel/display"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10700001
+anchor_top = 0.058000002
+anchor_right = 0.96400005
+anchor_bottom = 0.92600006
+offset_left = -0.16871262
+offset_top = 0.0251503
+offset_right = -110.09454
+offset_bottom = -45.48175
+scale = Vector2(1.5429605, 1.3059691)
+texture = ExtResource("13_jdmr4")
+expand_mode = 1
+
+[node name="ExitButton" type="TextureButton" parent="Game/SateliteBuilder/Control"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 109.0
+texture_normal = ExtResource("14_cqoaj")
+
+[node name="Header" type="TextureRect" parent="Game/SateliteBuilder/Control"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 12.0
+offset_right = 664.0
+offset_bottom = 108.0
+texture = ExtResource("15_dfdmh")
+
+[node name="Label" type="Label" parent="Game/SateliteBuilder/Control/Header"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.19900002
+anchor_bottom = 0.078
+offset_left = 22.0
+offset_top = 15.0
+offset_right = 43.564995
+offset_bottom = 74.512
+theme_override_font_sizes/font_size = 38
+text = "Mise: "
+
+[node name="DialogPanel" type="TextureRect" parent="Game/SateliteBuilder/Control"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 438.0
+offset_right = 664.0
+offset_bottom = 837.0
+texture = ExtResource("16_dpwfp")
+
+[node name="MainText" type="Label" parent="Game/SateliteBuilder/Control/DialogPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 23.0
+offset_right = 148.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 28
+text = "Chybí díly"
+script = ExtResource("17_3w8c3")
+
+[node name="Error" type="TextureRect" parent="Game/SateliteBuilder/Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 443.0
+offset_right = 96.0
+offset_bottom = 568.0
+texture = ExtResource("17_ju07r")
+
+[node name="StartButton" type="TextureButton" parent="Game/SateliteBuilder/Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 593.0
+offset_right = 97.0
+offset_bottom = 832.0
+texture_normal = ExtResource("18_mmfdq")
+
+[node name="RocketBuilder" type="Node" parent="Game"]
+
+[node name="Rez" type="Label" parent="Game"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.119
+anchor_bottom = 0.039
+offset_right = -188.48
+offset_bottom = -19.12
+theme_override_font_sizes/font_size = 30
+text = "rez: 4000 x 4000"
+script = ExtResource("13_xcexr")
+
+[node name="Bacground" type="Node" parent="." node_paths=PackedStringArray("mainBcg_sprite", "satelite_sprite")]
+script = ExtResource("1_t63de")
+mainBcg_sprite = NodePath("BCG")
+satelite_sprite = NodePath("Satelite")
+bcg_x_pos = Vector2(700, 1200)
+bcg_y_pos = Vector2(410, 690)
+sat_x_pos = Vector2(1600, 2100)
+sat_y_pos = Vector2(50, 600)
+
+[node name="BCG" type="Sprite2D" parent="Bacground"]
+position = Vector2(756, 656)
+texture = ExtResource("1_x5siv")
+
+[node name="Satelite" type="Sprite2D" parent="Bacground"]
+visible = false
+position = Vector2(1904.0001, 117.00001)
+scale = Vector2(1.62281, 1.62281)
+texture = ExtResource("2_svw77")
+
+[node name="SateliteBuilder" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="BuilderRoot" type="Node2D" parent="SateliteBuilder"]
+
+[node name="SidePanelInside" type="Sprite2D" parent="SateliteBuilder/BuilderRoot"]
+visible = false
+position = Vector2(1612, 530)
+texture = ExtResource("16_kow25")
+
+[node name="InsidePanelPicker" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(3, -285)
+componentID = 9
+
+[node name="InsidePanelPicker2" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(3, -167)
+componentID = 2
+
+[node name="InsidePanelPicker3" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(1, -53)
+componentID = 1
+
+[node name="InsidePanelPicker4" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(1, 65)
+componentID = 4
+
+[node name="InsidePanelPicker5" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(-1, 174)
+componentID = 6
+
+[node name="InsidePanelPicker6" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(-1, 292)
+componentID = 8
+
+[node name="InsidePanelPicker7" parent="SateliteBuilder/BuilderRoot/SidePanelInside" instance=ExtResource("18_rcnnr")]
+position = Vector2(-3, 406)
+componentID = 3
+
+[node name="InsideButtons" type="Node2D" parent="SateliteBuilder/BuilderRoot/SidePanelInside"]
+
+[node name="SidePanelOutside" type="Sprite2D" parent="SateliteBuilder/BuilderRoot"]
+position = Vector2(1612, 530)
+texture = ExtResource("20_2i728")
+
+[node name="OutsideModulePicker" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(-104, -250)
+componentID = 10
+
+[node name="OutsideModulePicker2" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(115, -250)
+componentID = 11
+
+[node name="OutsideModulePicker3" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(-104, -52)
+componentID = 7
+
+[node name="OutsideModulePicker4" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(115, -52)
+
+[node name="OutsideModulePicker5" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(-104, 149)
+componentID = 12
+
+[node name="OutsideModulePicker6" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(115, 149)
+componentID = 13
+
+[node name="OutsideModulePicker7" parent="SateliteBuilder/BuilderRoot/SidePanelOutside" instance=ExtResource("26_3diua")]
+position = Vector2(10, 339)
+componentID = 5
+
+[node name="SatBase" type="Sprite2D" parent="SateliteBuilder/BuilderRoot"]
+position = Vector2(971, 590)
+texture = ExtResource("21_0noyg")
+
+[node name="InsideModules" type="Node2D" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="InsidePanel" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules"]
+position = Vector2(1056, 487)
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="InsidePanel2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules"]
+position = Vector2(1056, 577)
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel2"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel2"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InsidePanel3" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules"]
+position = Vector2(1056, 667)
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel3"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel3"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="InsidePanel4" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules"]
+position = Vector2(1056, 757)
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel4"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/InsideModules/InsidePanel4"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InsideModulesSmall" type="Node2D" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="OutsideModules" type="Node2D" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="FullPanel" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1055, 614)
+texture = ExtResource("33_g56xo")
+
+[node name="ModuleVB" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(971, 508)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleVB2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1105, 504)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleVB3" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1041, 612)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleVB4" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1167, 616)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleVB5" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(979, 727)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleVB6" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1113, 723)
+texture = ExtResource("34_prg8c")
+
+[node name="ModuleSlot_7" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(971, 508)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_7"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="ModuleSlot_8" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1105, 504)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_8"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="ModuleSlot_9" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1041, 612)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_9"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="ModuleSlot_10" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1167, 616)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_10"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="ModuleSlot_11" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(979, 727)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_11"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="ModuleSlot_12" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules"]
+position = Vector2(1113, 723)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/OutsideModules/ModuleSlot_12"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="OutsideModulesSmall" type="Node2D" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="SidePanel" type="Node2D" parent="SateliteBuilder/BuilderRoot" node_paths=PackedStringArray("consumption_sprites", "storage_sprites", "creation_sprites")]
+script = ExtResource("35_2upmk")
+consumption_sprites = [NodePath("En"), NodePath("En2"), NodePath("En3"), NodePath("En4"), NodePath("En5"), NodePath("En6")]
+storage_sprites = [NodePath("Bat"), NodePath("Bat2"), NodePath("Bat3"), NodePath("Bat4"), NodePath("Bat5"), NodePath("Bat6")]
+creation_sprites = [NodePath("Sol"), NodePath("Sol2"), NodePath("Sol3"), NodePath("Sol4"), NodePath("Sol5"), NodePath("Sol6")]
+consumption_color = Color(0.8473845, 0.62614274, 0.25580442, 1)
+storage_color = Color(0.36767203, 0.66684395, 0.37941024, 1)
+creation_color = Color(0.38841045, 0.7161701, 0.9362446, 1)
+empty_color = Color(0.232593, 0.19162408, 0.2785428, 1)
+warning_color = Color(0.7894676, 0.23516753, 0.2585478, 1)
+energy_consumption = -1
+
+[node name="icoBat" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(772, 757)
+texture = ExtResource("27_dpwfp")
+
+[node name="icoEn" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(820, 771)
+texture = ExtResource("28_ju07r")
+
+[node name="icoSol" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(726, 746)
+texture = ExtResource("29_mmfdq")
+
+[node name="En" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 716)
+texture = ExtResource("30_i4us1")
+
+[node name="En2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 674)
+texture = ExtResource("30_i4us1")
+
+[node name="En3" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 633.5)
+texture = ExtResource("30_i4us1")
+
+[node name="En4" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 591.5)
+texture = ExtResource("30_i4us1")
+
+[node name="En5" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 550.5)
+texture = ExtResource("30_i4us1")
+
+[node name="En6" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(830, 508.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 702)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 660)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat3" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 619.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat4" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 577.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat5" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 536.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Bat6" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(780, 494.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 688)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 646)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol3" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 605.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol4" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 563.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol5" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 522.5)
+texture = ExtResource("30_i4us1")
+
+[node name="Sol6" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/SidePanel"]
+position = Vector2(730, 480.5)
+texture = ExtResource("30_i4us1")
+
+[node name="InsideModuleButtons" type="CanvasLayer" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="InsideButton" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 867.0
+offset_top = 443.0
+offset_right = 1244.0
+offset_bottom = 523.0
+
+[node name="InsideButton2" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 867.0
+offset_top = 531.0
+offset_right = 1244.0
+offset_bottom = 611.0
+
+[node name="InsideButton3" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 863.0
+offset_top = 625.0
+offset_right = 1240.0
+offset_bottom = 705.0
+
+[node name="InsideButton4" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 865.0
+offset_top = 719.0
+offset_right = 1242.0
+offset_bottom = 799.0
+
+[node name="Button5" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1440.0
+offset_top = 197.0
+offset_right = 1786.0
+offset_bottom = 295.0
+
+[node name="Button6" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1442.0
+offset_top = 312.0
+offset_right = 1788.0
+offset_bottom = 410.0
+
+[node name="Button7" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1438.0
+offset_top = 427.0
+offset_right = 1784.0
+offset_bottom = 525.0
+
+[node name="Button8" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1440.0
+offset_top = 542.0
+offset_right = 1786.0
+offset_bottom = 640.0
+
+[node name="Button9" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1440.0
+offset_top = 655.0
+offset_right = 1786.0
+offset_bottom = 753.0
+
+[node name="Button10" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1442.0
+offset_top = 770.0
+offset_right = 1788.0
+offset_bottom = 868.0
+
+[node name="Button11" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1435.0
+offset_top = 885.0
+offset_right = 1781.0
+offset_bottom = 983.0
+
+[node name="OutsideModuleButtons" type="CanvasLayer" parent="SateliteBuilder/BuilderRoot"]
+
+[node name="PickerButton" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1416.0
+offset_top = 212.0
+offset_right = 1594.0
+offset_bottom = 384.0
+
+[node name="PickerButton2" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1638.0
+offset_top = 214.0
+offset_right = 1816.0
+offset_bottom = 386.0
+
+[node name="PickerButton3" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1419.0
+offset_top = 408.0
+offset_right = 1597.0
+offset_bottom = 580.0
+
+[node name="PickerButton4" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1641.0
+offset_top = 410.0
+offset_right = 1819.0
+offset_bottom = 582.0
+
+[node name="PickerButton5" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1421.0
+offset_top = 608.0
+offset_right = 1599.0
+offset_bottom = 780.0
+
+[node name="PickerButton6" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1643.0
+offset_top = 610.0
+offset_right = 1821.0
+offset_bottom = 782.0
+
+[node name="PickerButton7" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1537.0
+offset_top = 797.0
+offset_right = 1715.0
+offset_bottom = 969.0
+
+[node name="Button1" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 867.0
+offset_top = 414.0
+offset_right = 1027.0
+offset_bottom = 559.0
+
+[node name="Button2" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1042.0
+offset_top = 405.0
+offset_right = 1186.0
+offset_bottom = 550.0
+
+[node name="Button3" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 922.0
+offset_top = 562.0
+offset_right = 1097.0
+offset_bottom = 667.0
+
+[node name="Button4" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1119.0
+offset_top = 558.0
+offset_right = 1294.0
+offset_bottom = 663.0
+
+[node name="Button5" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 865.0
+offset_top = 674.0
+offset_right = 1040.0
+offset_bottom = 793.0
+
+[node name="Button6" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+offset_left = 1054.0
+offset_top = 675.0
+offset_right = 1229.0
+offset_bottom = 794.0
+
+[node name="RotationManager" type="Node" parent="SateliteBuilder/BuilderRoot"]
+script = ExtResource("35_prg8c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SateliteBuilder/BuilderRoot/RotationManager"]
+
+[node name="RotateButton" type="Button" parent="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+anchors_preset = -1
+anchor_left = 0.43
+anchor_top = 0.81700003
+anchor_right = 0.62
+anchor_bottom = 0.943
+offset_left = -0.6000366
+offset_top = -0.3600464
+offset_right = -0.4000244
+offset_bottom = -0.44000244
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[node name="RotateButton2" type="Button" parent="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.08800001
+anchor_right = 0.65500003
+anchor_bottom = 0.27
+offset_left = -25.960022
+offset_top = -0.040008545
+offset_right = -0.60009766
+offset_bottom = 0.3999939
+focus_mode = 0
+
+[node name="RotateButton3" type="Button" parent="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer"]
+self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
+anchors_preset = -1
+anchor_left = 0.703
+anchor_top = 0.040000003
+anchor_right = 0.98100007
+anchor_bottom = 0.155
+offset_left = 0.23999023
+offset_top = -0.20000458
+offset_right = 0.4798584
+offset_bottom = -0.3999939
+focus_mode = 0
+
+[node name="RotateButtonIcon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/RotationManager"]
+position = Vector2(909, 947.5)
+texture = ExtResource("36_1jkgm")
+
+[node name="RotateButtonIcon2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/RotationManager"]
+position = Vector2(1095, 949.5)
+texture = ExtResource("36_1jkgm")
+flip_h = true
+
+[node name="DragDropManager" type="Node" parent="SateliteBuilder/BuilderRoot" node_paths=PackedStringArray("InsidePickerButtons", "InsideSateliteButtons", "OutsidePickerButtons", "OutsideSateliteButtons", "InsidePickerSlots", "InsideSateliteSlots", "OutsidePickerSlots", "OutsideSateliteSlots")]
+unique_name_in_owner = true
+script = ExtResource("38_gk6wh")
+InsidePickerButtons = [NodePath("../InsideModuleButtons/Button5"), NodePath("../InsideModuleButtons/Button6"), NodePath("../InsideModuleButtons/Button7"), NodePath("../InsideModuleButtons/Button8"), NodePath("../InsideModuleButtons/Button9"), NodePath("../InsideModuleButtons/Button10"), NodePath("../InsideModuleButtons/Button11")]
+InsideSateliteButtons = [NodePath("../InsideModuleButtons/InsideButton"), NodePath("../InsideModuleButtons/InsideButton2"), NodePath("../InsideModuleButtons/InsideButton3"), NodePath("../InsideModuleButtons/InsideButton4")]
+OutsidePickerButtons = [NodePath("../OutsideModuleButtons/PickerButton"), NodePath("../OutsideModuleButtons/PickerButton2"), NodePath("../OutsideModuleButtons/PickerButton3"), NodePath("../OutsideModuleButtons/PickerButton4"), NodePath("../OutsideModuleButtons/PickerButton5"), NodePath("../OutsideModuleButtons/PickerButton6"), NodePath("../OutsideModuleButtons/PickerButton7")]
+OutsideSateliteButtons = [NodePath("../OutsideModuleButtons/Button1"), NodePath("../OutsideModuleButtons/Button2"), NodePath("../OutsideModuleButtons/Button3"), NodePath("../OutsideModuleButtons/Button4"), NodePath("../OutsideModuleButtons/Button5"), NodePath("../OutsideModuleButtons/Button6")]
+InsidePickerSlots = [NodePath("../SidePanelInside/InsidePanelPicker"), NodePath("../SidePanelInside/InsidePanelPicker2"), NodePath("../SidePanelInside/InsidePanelPicker3"), NodePath("../SidePanelInside/InsidePanelPicker4"), NodePath("../SidePanelInside/InsidePanelPicker5"), NodePath("../SidePanelInside/InsidePanelPicker6"), NodePath("../SidePanelInside/InsidePanelPicker7")]
+InsideSateliteSlots = [NodePath("../InsideModules/InsidePanel"), NodePath("../InsideModules/InsidePanel2"), NodePath("../InsideModules/InsidePanel3"), NodePath("../InsideModules/InsidePanel4")]
+OutsidePickerSlots = [NodePath("../SidePanelOutside/OutsideModulePicker"), NodePath("../SidePanelOutside/OutsideModulePicker2"), NodePath("../SidePanelOutside/OutsideModulePicker3"), NodePath("../SidePanelOutside/OutsideModulePicker4"), NodePath("../SidePanelOutside/OutsideModulePicker5"), NodePath("../SidePanelOutside/OutsideModulePicker6"), NodePath("../SidePanelOutside/OutsideModulePicker7")]
+OutsideSateliteSlots = [NodePath("../OutsideModules/ModuleSlot_7"), NodePath("../OutsideModules/ModuleSlot_8"), NodePath("../OutsideModules/ModuleSlot_9"), NodePath("../OutsideModules/ModuleSlot_10"), NodePath("../OutsideModules/ModuleSlot_11"), NodePath("../OutsideModules/ModuleSlot_12")]
+
+[node name="MouseFollow" type="Node2D" parent="SateliteBuilder/BuilderRoot/DragDropManager"]
+visible = false
+script = ExtResource("41_7beed")
+
+[node name="MouseMooveOut" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow"]
+visible = false
+position = Vector2(1, 1)
+texture = ExtResource("36_f7xtl")
+
+[node name="Icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow/MouseMooveOut"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 3)
+texture = ExtResource("37_hhmga")
+
+[node name="InsidePanel" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow"]
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow/InsidePanel"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow/InsidePanel"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="InsidePanel2" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow"]
+position = Vector2(0, 90)
+texture = ExtResource("27_mmfdq")
+
+[node name="icon" type="Sprite2D" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow/InsidePanel2"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-6.75, -17.5)
+scale = Vector2(0.7280702, 0.6964286)
+texture = ExtResource("28_i4us1")
+
+[node name="Label" type="Label" parent="SateliteBuilder/BuilderRoot/DragDropManager/MouseFollow/InsidePanel2"]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.6
+anchor_right = 0.75600004
+anchor_bottom = 0.94400007
+offset_left = -167.888
+offset_top = -44.000004
+offset_right = -168.01602
+offset_bottom = -44.960007
+theme_override_font_sizes/font_size = 22
+text = "baterie"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CompLib" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("13_ay1ce")
+Comps = Array[ExtResource("21_wct6h")]([ExtResource("22_rq8wd"), ExtResource("23_1jgt1"), ExtResource("24_2fjmt"), ExtResource("25_hqm0r"), ExtResource("26_vg3yx"), ExtResource("27_tr0de"), ExtResource("28_d5txl"), ExtResource("29_jdmr4"), ExtResource("30_cqoaj"), ExtResource("31_dfdmh"), ExtResource("32_dpwfp"), ExtResource("33_ju07r"), ExtResource("34_mmfdq"), ExtResource("35_i4us1"), ExtResource("57_hhmga")])
+
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Fir" to="Game/MisionSelect" method="_on_button_m_fir_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Fir" to="Game/MisionSelect" method="_on_button_m_fir_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Far" to="Game/MisionSelect" method="_on_button_m_far_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Far" to="Game/MisionSelect" method="_on_button_m_far_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Gps" to="Game/MisionSelect" method="_on_button_m_gps_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Gps" to="Game/MisionSelect" method="_on_button_m_gps_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Rad" to="Game/MisionSelect" method="_on_button_m_rad_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Rad" to="Game/MisionSelect" method="_on_button_m_rad_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Poc" to="Game/MisionSelect" method="_on_button_m_poc_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Poc" to="Game/MisionSelect" method="_on_button_m_poc_mouse_exited"]
+[connection signal="mouse_entered" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Sat" to="Game/MisionSelect" method="_on_button_m_sat_mouse_entered"]
+[connection signal="mouse_exited" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Sat" to="Game/MisionSelect" method="_on_button_m_sat_mouse_exited"]
+[connection signal="pressed" from="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer/RotateButton" to="SateliteBuilder/BuilderRoot/RotationManager" method="_on_rotate_button_pressed"]
+[connection signal="pressed" from="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer/RotateButton2" to="SateliteBuilder/BuilderRoot/RotationManager" method="_on_rotate_button_2_pressed"]
+[connection signal="pressed" from="SateliteBuilder/BuilderRoot/RotationManager/CanvasLayer/RotateButton3" to="SateliteBuilder/BuilderRoot/RotationManager" method="_on_rotate_button_3_pressed"]

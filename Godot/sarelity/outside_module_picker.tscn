@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://br072d6yd3w21"]
+
+[ext_resource type="Texture2D" uid="uid://doslg6u1kxypj" path="res://satBuilder/satGame_g105_satBuild.png" id="1_1uk18"]
+[ext_resource type="Script" uid="uid://c3lpougnfci6q" path="res://outside_module_picker.gd" id="2_kgn1w"]
+[ext_resource type="Texture2D" uid="uid://bx63e0ba7s57y" path="res://satBuilder/satGame_path46_satBuild.png" id="2_uqg2p"]
+[ext_resource type="Texture2D" uid="uid://uu8v6qqfy6go" path="res://satBuilder/satGame_g106_satBuild.png" id="3_kj2sg"]
+[ext_resource type="Texture2D" uid="uid://cuaqt40le3ggo" path="res://satBuilder/satGame_g28_satBuild.png" id="4_lu47l"]
+
+[node name="OutsideModulePicker" type="Sprite2D"]
+texture = ExtResource("3_kj2sg")
+script = ExtResource("2_kgn1w")
+textureEnabled = ExtResource("3_kj2sg")
+textureDisabled = ExtResource("1_1uk18")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -128.0
+offset_top = 65.0
+offset_right = 128.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 22
+text = "SADSAD"
+horizontal_alignment = 1
+
+[node name="Indicator" type="Node2D" parent="Label"]
+position = Vector2(-40, 18)
+
+[node name="Label" type="Label" parent="Label/Indicator"]
+offset_left = 131.0
+offset_top = -173.0
+offset_right = 171.0
+offset_bottom = -106.0
+scale = Vector2(0.68000066, 0.68000066)
+theme_override_colors/font_color = Color(0.09803922, 0.49803922, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "3"
+
+[node name="SatGameG28SatBuild3" type="Sprite2D" parent="Label/Indicator"]
+position = Vector2(111, -152)
+scale = Vector2(0.68000066, 0.68000066)
+texture = ExtResource("4_lu47l")
+
+[node name="icon" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2, 2)
+texture = ExtResource("2_uqg2p")

@@ -9,5 +9,5 @@ size = 1
 EnergyConsumption = 1
 icon = ExtResource("1_e374u")
 ID = 4
-name = "Výpočetní paměť"
+name = "Datové uložiště"
 metadata/_custom_type_script = "uid://cxrma0bgxai16"

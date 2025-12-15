@@ -9,5 +9,5 @@ location = 1
 size = 1
 icon = ExtResource("1_mcibl")
 ID = 13
-name = "Spektrální kamera"
+name = "Spektroskop"
 metadata/_custom_type_script = "uid://cxrma0bgxai16"

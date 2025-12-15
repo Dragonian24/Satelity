@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=10 format=3 uid="uid://b6js52l2t3roo"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_1cy3u"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="2_pmqrc"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="2_rgn5v"]
+[ext_resource type="Resource" uid="uid://6h7jcimxadxr" path="res://Comps/Procesor.tres" id="3_v6lcd"]
+[ext_resource type="Resource" uid="uid://chid7wthp51xu" path="res://Comps/Termocam.tres" id="4_n7sdx"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="5_iaw8o"]
+[ext_resource type="Resource" uid="uid://djqpcsofuaxfa" path="res://Comps/MultiCam.tres" id="6_qbg4l"]
+[ext_resource type="Resource" uid="uid://c5l8b7ldo2lbw" path="res://Comps/SpektroCam.tres" id="7_nsax5"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="8_v6lcd"]
+
+[resource]
+script = ExtResource("2_rgn5v")
+name = "Zemědělství"
+info = "Navrhni satelit sledující stav plodin a půdy z oběžné dráhy."
+neededComps = Array[ExtResource("1_1cy3u")]([ExtResource("5_iaw8o"), ExtResource("6_qbg4l"), ExtResource("7_nsax5"), ExtResource("8_v6lcd")])
+additionalComps = Array[ExtResource("1_1cy3u")]([ExtResource("2_pmqrc"), ExtResource("3_v6lcd"), ExtResource("4_n7sdx")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"

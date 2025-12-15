@@ -7,8 +7,6 @@ extends Control
 @export var butt_poc : TextureButton
 @export var butt_sat : TextureButton
 var time = 0.3
-var max = 2
-var min = 1
 var tween: Tween
 
 

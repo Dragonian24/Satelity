@@ -3,6 +3,6 @@ extends Label
 @onready var resolution = get_viewport().get_size()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	resolution = get_viewport().get_size()
 	txt.text = "rez %s %s" % [resolution.x, resolution.y]

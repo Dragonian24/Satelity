@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://btslloccpoynn"]
+[gd_scene load_steps=9 format=3 uid="uid://btslloccpoynn"]
 
 [ext_resource type="Texture2D" uid="uid://d016xmslsguf7" path="res://satBuilder/satGame_g99_satBuild.png" id="1_jj71e"]
 [ext_resource type="Script" uid="uid://boipvecjjjgd2" path="res://inside_panel_picker.gd" id="2_jj71e"]
+[ext_resource type="Texture2D" uid="uid://clnbja7xd3kwx" path="res://satBuilder/satGame_g100_satBuild.png" id="3_io10e"]
 [ext_resource type="Texture2D" uid="uid://ba3rajllj2c8g" path="res://satBuilder/satGame_g84_satBuild.png" id="3_jj71e"]
 [ext_resource type="Texture2D" uid="uid://b44xykncsgr2s" path="res://satBuilder/satGame_g42_satBuild.png" id="3_pgvcn"]
 [ext_resource type="Texture2D" uid="uid://cc6rcryfmvr4m" path="res://satBuilder/satGame_rect782-3_satBuild.png" id="4_jj71e"]
+[ext_resource type="Texture2D" uid="uid://tuf0lyo8ryh1" path="res://satBuilder/satGame_g30_satBuild.png" id="7_hergu"]
+[ext_resource type="Texture2D" uid="uid://bqbj177frnal6" path="res://satBuilder/satGame_g29_satBuild.png" id="8_15csf"]
 
 [node name="InsidePanelPicker" type="Sprite2D"]
 texture = ExtResource("1_jj71e")
 script = ExtResource("2_jj71e")
+textureEnabled = ExtResource("1_jj71e")
+textureDisabled = ExtResource("3_io10e")
 
 [node name="PanelIn" type="Node2D" parent="."]
 
@@ -36,11 +41,40 @@ theme_override_font_sizes/font_size = 19
 text = "satelit"
 horizontal_alignment = 1
 
-[node name="Hitbox" type="Control" parent="."]
-layout_mode = 3
-anchor_right = 0.98800004
-anchor_bottom = 0.96900004
-offset_left = -171.0
-offset_top = -49.0
-offset_right = -171.87201
-offset_bottom = -48.962006
+[node name="IndicatorStor" type="Node2D" parent="PanelIn"]
+position = Vector2(-137, -2)
+
+[node name="LabelStor" type="Label" parent="PanelIn/IndicatorStor"]
+offset_left = 20.880013
+offset_top = -20.0
+offset_right = 60.880013
+offset_bottom = 47.0
+scale = Vector2(0.68000066, 0.68000066)
+theme_override_colors/font_color = Color(0.41306266, 0.6408625, 0.30896533, 1)
+theme_override_font_sizes/font_size = 48
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="SatGameG28SatBuild3" type="Sprite2D" parent="PanelIn/IndicatorStor"]
+position = Vector2(0.8800125, 1)
+scale = Vector2(0.68000066, 0.68000066)
+texture = ExtResource("7_hergu")
+
+[node name="IndicatorCons" type="Node2D" parent="PanelIn"]
+position = Vector2(-137, -2)
+
+[node name="LabelCons" type="Label" parent="PanelIn/IndicatorCons"]
+offset_left = 20.880013
+offset_top = -20.0
+offset_right = 60.880013
+offset_bottom = 47.0
+scale = Vector2(0.68000066, 0.68000066)
+theme_override_colors/font_color = Color(0.5686961, 0.5267922, 0.2474246, 1)
+theme_override_font_sizes/font_size = 48
+text = "9"
+metadata/_edit_use_anchors_ = true
+
+[node name="SatGameG28SatBuild3" type="Sprite2D" parent="PanelIn/IndicatorCons"]
+position = Vector2(0.8800125, 1)
+scale = Vector2(0.68000066, 0.68000066)
+texture = ExtResource("8_15csf")

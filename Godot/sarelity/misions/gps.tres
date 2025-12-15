@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=6 format=3 uid="uid://6eo508dmu3bs"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_xerhm"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="2_y0k2l"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="2_yvxou"]
+[ext_resource type="Resource" uid="uid://2q1n47dga27m" path="res://Comps/AtomicClock.tres" id="3_jd8ow"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="4_dkugt"]
+
+[resource]
+script = ExtResource("2_yvxou")
+name = "Navigační systém"
+info = "Vytvoř satelit pro přesné určení polohy a času."
+neededComps = Array[ExtResource("1_xerhm")]([ExtResource("2_y0k2l"), ExtResource("3_jd8ow"), ExtResource("4_dkugt")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"

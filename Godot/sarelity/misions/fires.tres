@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=10 format=3 uid="uid://gt7hkrmurfco"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_jxj0b"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="1_r4nxs"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="2_gg2yi"]
+[ext_resource type="Resource" uid="uid://djqpcsofuaxfa" path="res://Comps/MultiCam.tres" id="3_xavnp"]
+[ext_resource type="Resource" uid="uid://6h7jcimxadxr" path="res://Comps/Procesor.tres" id="4_m0mna"]
+[ext_resource type="Resource" uid="uid://c5l8b7ldo2lbw" path="res://Comps/SpektroCam.tres" id="5_dldig"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="6_r0kxw"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="7_bghds"]
+[ext_resource type="Resource" uid="uid://chid7wthp51xu" path="res://Comps/Termocam.tres" id="8_niot6"]
+
+[resource]
+script = ExtResource("1_r4nxs")
+name = "Lesní požáry"
+info = "Postav satelit, který pomocí senzorů odhalí a předvídá lesní požáry."
+neededComps = Array[ExtResource("1_jxj0b")]([ExtResource("6_r0kxw"), ExtResource("7_bghds"), ExtResource("8_niot6")])
+additionalComps = Array[ExtResource("1_jxj0b")]([ExtResource("2_gg2yi"), ExtResource("3_xavnp"), ExtResource("4_m0mna"), ExtResource("5_dldig")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"

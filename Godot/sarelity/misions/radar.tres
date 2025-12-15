@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=8 format=3 uid="uid://h525k66wdqtn"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_3imiq"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="2_41p5l"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="2_o0vhr"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="3_tnodj"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="4_g7adb"]
+[ext_resource type="Resource" uid="uid://cldkchlust5tk" path="res://Comps/RadarA.tres" id="5_gwda1"]
+[ext_resource type="Resource" uid="uid://cxrp5gu60t5rh" path="res://Comps/RadarB.tres" id="6_a4g8r"]
+
+[resource]
+script = ExtResource("2_41p5l")
+name = "Radarové snímky"
+info = "Postav radarový satelit snímající Zemi za každého počasí."
+neededComps = Array[ExtResource("1_3imiq")]([ExtResource("3_tnodj"), ExtResource("4_g7adb"), ExtResource("5_gwda1"), ExtResource("6_a4g8r")])
+additionalComps = Array[ExtResource("1_3imiq")]([ExtResource("2_o0vhr")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"

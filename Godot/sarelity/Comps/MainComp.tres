@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_gwyjk")
 size = 1
-EnergyConsumption = 1
 icon = ExtResource("1_mngar")
 ID = 5
 name = "Řídící jednotka"

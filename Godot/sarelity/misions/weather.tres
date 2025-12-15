@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Mision" load_steps=8 format=3 uid="uid://4747i5htmj7r"]
+
+[ext_resource type="Script" uid="uid://cxrma0bgxai16" path="res://Comps/Component.gd" id="1_ha1rf"]
+[ext_resource type="Resource" uid="uid://rw3ocanhss16" path="res://Comps/DataStor.tres" id="2_6o6vc"]
+[ext_resource type="Script" uid="uid://bpletwrnbsa5c" path="res://misions/mision.gd" id="2_bo8of"]
+[ext_resource type="Resource" uid="uid://c4mnuqrinft30" path="res://Comps/Antena.tres" id="3_omyvn"]
+[ext_resource type="Resource" uid="uid://kaaa8jdgbdrl" path="res://Comps/MainComp.tres" id="4_loyhc"]
+[ext_resource type="Resource" uid="uid://djqpcsofuaxfa" path="res://Comps/MultiCam.tres" id="5_h5mvj"]
+[ext_resource type="Resource" uid="uid://c5l8b7ldo2lbw" path="res://Comps/SpektroCam.tres" id="6_cxikv"]
+
+[resource]
+script = ExtResource("2_bo8of")
+name = "Počasí"
+info = "Navrhni satelit sledující atmosféru a extrémní jevy."
+neededComps = Array[ExtResource("1_ha1rf")]([ExtResource("3_omyvn"), ExtResource("4_loyhc"), ExtResource("5_h5mvj"), ExtResource("6_cxikv")])
+additionalComps = Array[ExtResource("1_ha1rf")]([ExtResource("2_6o6vc")])
+metadata/_custom_type_script = "uid://bpletwrnbsa5c"
