@@ -18,6 +18,9 @@ var score = 1000
 
 func _ready() -> void:
 	ctitErrors()
+	
+@onready var rocket_build: Label = $Panel/VBoxContainer/Panel2/HBoxContainer/VBoxContainer/RocketBuild
+@onready var game: CanvasLayer = %Game
 
 func ctitErrors() -> void:
 	var values = mison_manager.values
@@ -26,6 +29,10 @@ func ctitErrors() -> void:
 	var insidePanels = mison_manager.insidePanels
 	var outsidePanels = mison_manager.outsidePanels
 	
+	score = 1000
+	if(game.rocket_build): score += 1000
+	rocket_build.visible = game.rocket_build
+	
 	calcEnergy(messages, values)
 	calcMissing(this_mision, insidePanels, outsidePanels)
 	calcAdd(this_mision, insidePanels, outsidePanels)
@@ -33,12 +40,20 @@ func ctitErrors() -> void:
 	
 	scoreLabel.text = "Skóre: " + str(score) 
 
+@onready var ignored_comps: Array[Component] = [
+	comp_lib.Comps[3],
+	comp_lib.Comps[9],
+	comp_lib.Comps[2],
+	comp_lib.Comps[11],
+	comp_lib.Comps[14],
+]
+
 func calcAdi(this_mision, insidePanels, outsidePanels) -> void:
 	var adi = false
 	var adiStr: String = "Přebývají komponenty: \n"
 
 	for i in insidePanels.size():		
-		if insidePanels[i] == comp_lib.Comps[14]: break
+		if ignored_comps.has(insidePanels[i]): continue
 		var found = false
 		for j in this_mision.neededComps.size():
 			if insidePanels[i] == this_mision.neededComps[j]:
@@ -55,7 +70,7 @@ func calcAdi(this_mision, insidePanels, outsidePanels) -> void:
 		
 		
 	for i in outsidePanels.size():		
-		if outsidePanels[i] == comp_lib.Comps[14]: break
+		if ignored_comps.has(outsidePanels[i]): continue
 		var found = false
 		for j in this_mision.neededComps.size():
 			if outsidePanels[i] == this_mision.neededComps[j]:
@@ -70,7 +85,9 @@ func calcAdi(this_mision, insidePanels, outsidePanels) -> void:
 			score -= 50
 			adiStr += outsidePanels[i].name + "\n"
 				
-	if adi == false: adiStr = ""
+	if adi == false: 
+		adiStr = ""
+		print_debug("no adi")
 	aditional_text.text = adiStr 
 	
 	

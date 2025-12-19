@@ -21,8 +21,7 @@ func enableButon(enabled: bool) -> void:
 	else:
 		$".".texture = textureDisabled
 		
-		
-		
+
 func _ready() -> void:
 	thisComponent = comp_lib.Comps[componentID]
 	icon.texture = thisComponent.icon

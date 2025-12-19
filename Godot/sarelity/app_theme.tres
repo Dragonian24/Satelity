@@ -1,38 +1,36 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://lhol0n1nogau"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebr2e"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://lhol0n1nogau"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p62wp"]
-bg_color = Color(0.109804, 0.172549, 0.572549, 0.478431)
+bg_color = Color(1, 1, 1, 0.47843137)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.656101, 0.716261, 0.985032, 1)
+border_color = Color(0.6281942, 0.62300473, 0.63641316, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0rbg"]
-bg_color = Color(0.109804, 0.172549, 0.572549, 0.478431)
+bg_color = Color(1, 1, 1, 0.47843137)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.219608, 0.219608, 0.741176, 1)
+border_color = Color(0.3194692, 0.31632516, 0.32572782, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v56oi"]
-bg_color = Color(0.109804, 0.172549, 0.572549, 0.478431)
+bg_color = Color(1, 1, 1, 0.6901961)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0, 0.899073, 0.900338, 1)
+border_color = Color(0.46799082, 0.4640664, 0.47581613, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -40,8 +38,7 @@ corner_radius_bottom_left = 50
 
 [resource]
 default_font_size = 30
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/styles/focus = SubResource("StyleBoxEmpty_ebr2e")
+Button/colors/font_color = Color(0.2159017, 0.21590173, 0.2159017, 1)
 Button/styles/hover = SubResource("StyleBoxFlat_p62wp")
 Button/styles/normal = SubResource("StyleBoxFlat_v0rbg")
 Button/styles/pressed = SubResource("StyleBoxFlat_v56oi")

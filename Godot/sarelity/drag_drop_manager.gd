@@ -49,8 +49,7 @@ var selectedID = 0
 var picked = false
 
 func _ready():
-	conect_all()
-	AllReset()
+	conect_all()	
 
 
 func set_inside_panels(index: int, comp: Component) -> void:
@@ -117,25 +116,53 @@ func _on_button_pressed_focus_exit(_group: int, _index: int) -> void:
 #mouse exit
 #endregion
 #region Reset
-func AllReset()-> void:
+#func AllReset()-> void:
+	#focusGroup = SateliteButtonGroup.NONE
+	#selectedGroup = SateliteButtonGroup.NONE
+	#focusId = 0
+	#selectedID = 0
+	#
+	#for panel in insidePanels:
+		#panel = comp_lib.Comps[14]
+	#for panel in outsidePanels:
+		#panel = comp_lib.Comps[14]
+	#
+	#mison_manager.insidePanels = insidePanels
+	#mison_manager.outsidePanels = outsidePanels
+	#
+	#for slot in InsideSateliteSlots:
+		#slot.visible = false	
+	#for slot in OutsideSateliteSlots:
+		#slot.visible = false
+	#
+	#for slot in InsidePickerSlots:
+		#slot.visible = false	
+	#for slot in OutsideSateliteSlots:
+		#slot.visible = false
+	
+	
+func AllReset() -> void:
 	focusGroup = SateliteButtonGroup.NONE
 	selectedGroup = SateliteButtonGroup.NONE
 	focusId = 0
 	selectedID = 0
-	
-	for panel in insidePanels:
-		panel = comp_lib.Comps[14]
-	for panel in outsidePanels:
-		panel = comp_lib.Comps[14]
-	
-	mison_manager.insidePanels = insidePanels
-	mison_manager.outsidePanels = outsidePanels
-	
-	for slot in InsideSateliteSlots:
-		slot.visible = false	
-	for slot in OutsideSateliteSlots:
-		slot.visible = false
-	
+	picked = false
+
+	for i in range(insidePanels.size()):
+		set_inside_panels(i, comp_lib.Comps[14])
+		InsideSateliteSlots[i].visible = false
+
+	for i in range(outsidePanels.size()):
+		set_outside_panels(i, comp_lib.Comps[14])
+		OutsideSateliteSlots[i].visible = false
+
+	for slot in InsidePickerSlots:
+		slot.visible = true
+		slot.enableButon(true)
+
+	for slot in OutsidePickerSlots:
+		slot.visible = true
+		slot.enableButon(true)
 #endregion
 
 func MouseClicked(group: int, index: int) -> void:

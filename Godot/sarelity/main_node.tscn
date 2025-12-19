@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://cxf4tkkil67t1"]
+[gd_scene load_steps=88 format=3 uid="uid://cxf4tkkil67t1"]
 
 [ext_resource type="Script" uid="uid://0nk0271446j5" path="res://scene_mannager.gd" id="1_07t30"]
 [ext_resource type="Script" uid="uid://8ufmig1sly0u" path="res://bacground_animation.gd" id="1_t63de"]
@@ -70,7 +70,21 @@
 [ext_resource type="Script" uid="uid://dmxjeplahf4dw" path="res://mison_manager.gd" id="44_4ooqd"]
 [ext_resource type="Resource" uid="uid://bparlervt5i0j" path="res://misions/surface.tres" id="45_i68ej"]
 [ext_resource type="Script" uid="uid://c77g3hwrvyq86" path="res://rocket_builder.gd" id="48_l0ms2"]
+[ext_resource type="Texture2D" uid="uid://dgdn853j0vmo6" path="res://misions/faconheavypn.png" id="55_gsrsw"]
+[ext_resource type="Texture2D" uid="uid://b1nvg28soficq" path="res://misions/soyuzpn.png" id="56_qreph"]
+[ext_resource type="Texture2D" uid="uid://ice73y51lcss" path="res://misions/ariane.png" id="57_gpbt2"]
 [ext_resource type="Resource" uid="uid://do0kyq5dgyb00" path="res://Comps/Empty.tres" id="57_hhmga"]
+[ext_resource type="Texture2D" uid="uid://cm1t3i0wb47au" path="res://misions/pslv.png" id="58_880y8"]
+[ext_resource type="Texture2D" uid="uid://cc0008pv6kd8o" path="res://satBuilder/world.jpg" id="59_qreph"]
+[ext_resource type="Texture2D" uid="uid://ciqvifesxwc12" path="res://satBuilder/biomassp.png" id="59_s2aov"]
+[ext_resource type="Texture2D" uid="uid://culati3s4v783" path="res://satBuilder/galileo.png" id="60_t4vem"]
+[ext_resource type="Texture2D" uid="uid://b5g02ity5fxoc" path="res://satBuilder/sentinel.png" id="61_k7brf"]
+[ext_resource type="Texture2D" uid="uid://bgjk1wlwdimg1" path="res://satBuilder/MeteosatThird.png" id="62_w2e5y"]
+[ext_resource type="Texture2D" uid="uid://cgc8s2lqr58mb" path="res://235fff90-ed38-4d10-a096-243baa11b355.png" id="63_pov6y"]
+[ext_resource type="Texture2D" uid="uid://bqplbykypm2n4" path="res://ui/h2.png" id="64_4ey38"]
+[ext_resource type="Texture2D" uid="uid://d36hmugkay73" path="res://ui/o2.png" id="65_8cths"]
+[ext_resource type="Texture2D" uid="uid://b0lsxcedjeppg" path="res://ui/tuhe.png" id="66_kw6pk"]
+[ext_resource type="Texture2D" uid="uid://d3kodirs8b72g" path="res://ui/olej.png" id="67_2prg8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kow25"]
 bg_color = Color(1, 1, 1, 0.243137)
@@ -103,6 +117,7 @@ texture = ExtResource("2_svw77")
 unique_name_in_owner = true
 
 [node name="BuilderRoot" type="Node2D" parent="SateliteBuilder"]
+visible = false
 
 [node name="SidePanelInside" type="Sprite2D" parent="SateliteBuilder/BuilderRoot"]
 visible = false
@@ -499,6 +514,7 @@ position = Vector2(730, 480.5)
 texture = ExtResource("30_i4us1")
 
 [node name="InsideModuleButtons" type="CanvasLayer" parent="SateliteBuilder/BuilderRoot"]
+visible = false
 
 [node name="InsideButton" type="Button" parent="SateliteBuilder/BuilderRoot/InsideModuleButtons"]
 self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
@@ -585,6 +601,7 @@ offset_right = 1781.0
 offset_bottom = 983.0
 
 [node name="OutsideModuleButtons" type="CanvasLayer" parent="SateliteBuilder/BuilderRoot"]
+visible = false
 
 [node name="PickerButton" type="Button" parent="SateliteBuilder/BuilderRoot/OutsideModuleButtons"]
 self_modulate = Color(7.017611, 7.017611, 2.7323751, 0)
@@ -826,6 +843,7 @@ this_Mission = ExtResource("27_6nvkf")
 
 [node name="EnterScreen" type="Control" parent="Game"]
 visible = false
+self_modulate = Color(0.34331012, 0.6191638, 0.3805572, 1)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -844,12 +862,13 @@ grow_horizontal = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 120
-text = "SATELITY
+text = "DRUŽICE
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Game/EnterScreen"]
+self_modulate = Color(0.18361714, 0.6344375, 0.8255116, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.4
@@ -1139,6 +1158,179 @@ offset_right = 97.0
 offset_bottom = 832.0
 texture_normal = ExtResource("18_mmfdq")
 
+[node name="Exit" type="Panel" parent="Game/SateliteBuilder"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Game/SateliteBuilder/Exit"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15300001
+anchor_top = 0.12200001
+anchor_right = 0.84900004
+anchor_bottom = 0.29500002
+offset_left = -0.76000977
+offset_top = 0.23999023
+offset_right = -0.080078125
+offset_bottom = 0.3999939
+size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="Game/SateliteBuilder/Exit/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "Přejete si opustit tvorbu družice?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exitYes" type="Button" parent="Game/SateliteBuilder/Exit"]
+self_modulate = Color(0.31410924, 0.6762331, 0.3927866, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.42800003
+anchor_right = 0.485
+anchor_bottom = 0.61700004
+offset_top = -0.24002075
+offset_right = 0.7999878
+offset_bottom = -0.3600464
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Ano"
+
+[node name="exitNo" type="Button" parent="Game/SateliteBuilder/Exit"]
+self_modulate = Color(0.88001215, 0.43897828, 0.33746406, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.536
+anchor_top = 0.42800003
+anchor_right = 0.771
+anchor_bottom = 0.61700004
+offset_left = -0.11999512
+offset_top = -0.24002075
+offset_right = 0.67993164
+offset_bottom = -0.3600464
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Ne"
+
+[node name="Finish" type="Panel" parent="Game/SateliteBuilder"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Game/SateliteBuilder/Finish"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15300001
+anchor_top = 0.12200001
+anchor_right = 0.84900004
+anchor_bottom = 0.29500002
+offset_left = -0.76000977
+offset_top = 0.23999023
+offset_right = -0.080078125
+offset_bottom = 0.3999939
+size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="Game/SateliteBuilder/Finish/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "Vyslat družici?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sendYes" type="Button" parent="Game/SateliteBuilder/Finish"]
+self_modulate = Color(0.31410924, 0.6762331, 0.3927866, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.42800003
+anchor_right = 0.485
+anchor_bottom = 0.61700004
+offset_top = -0.24002075
+offset_right = 0.7999878
+offset_bottom = -0.3600464
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Ano"
+
+[node name="sendNo" type="Button" parent="Game/SateliteBuilder/Finish"]
+self_modulate = Color(0.88001215, 0.43897828, 0.33746406, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.536
+anchor_top = 0.42800003
+anchor_right = 0.771
+anchor_bottom = 0.61700004
+offset_left = -0.11999512
+offset_top = -0.24002075
+offset_right = 0.67993164
+offset_bottom = -0.3600464
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Ne"
+
+[node name="sendRocket" type="Button" parent="Game/SateliteBuilder/Finish"]
+self_modulate = Color(0.27450982, 0.627451, 0.8156863, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.679
+anchor_right = 0.72300005
+anchor_bottom = 0.86800003
+offset_left = -0.76000977
+offset_top = -0.32000732
+offset_right = 0.83984375
+offset_bottom = -0.44006348
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Přizpůsobit raketu"
+
 [node name="Rez" type="Label" parent="Game"]
 visible = false
 anchors_preset = -1
@@ -1275,6 +1467,12 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="RocketBuild" type="Label" parent="Game/EndScene/Panel/VBoxContainer/Panel2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35222453, 0.66324586, 0.7911974, 1)
+theme_override_font_sizes/font_size = 48
+text = "Raketa postavena"
+
 [node name="EnergyText" type="Label" parent="Game/EndScene/Panel/VBoxContainer/Panel2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1335,8 +1533,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ydg44")
 theme_override_font_sizes/font_size = 48
-text = "Zpět"
+text = "Družice"
 
 [node name="Panel2" type="Panel" parent="Game/EndScene/Panel/VBoxContainer/Panel3/HBoxContainer"]
 self_modulate = Color(1, 1, 1, 0)
@@ -1352,6 +1551,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ydg44")
 theme_override_font_sizes/font_size = 48
 text = "Začít znovu"
 
@@ -1368,8 +1568,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ydg44")
 theme_override_font_sizes/font_size = 48
-text = "Volba misí"
+text = "Další mise"
 
 [node name="EndVid" type="VideoStreamPlayer" parent="Game/EndScene"]
 visible = false
@@ -1427,13 +1628,33 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 20
 
-[node name="Infotext" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer"]
-self_modulate = Color(0.34509805, 0.92941177, 0, 1)
+[node name="NinePatchRect" type="NinePatchRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Infotext" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/NinePatchRect"]
+self_modulate = Color(0.34509805, 0.92941177, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055000003
+anchor_top = 0.047000002
+anchor_right = 0.96300006
+anchor_bottom = 0.943
+offset_left = -0.065000534
+offset_top = -0.26599503
+offset_right = 0.17098999
+offset_bottom = 0.24597168
+size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 28
 text = "mise:
 raketa:"
 horizontal_alignment = 1
@@ -1461,34 +1682,350 @@ self_modulate = Color(1, 0.57895267, 0.51213557, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "Ariane"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("55_gsrsw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_font_sizes/font_size = 36
+text = "Falcon 9"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RocketButton2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa"]
 self_modulate = Color(0.2828208, 0.9492789, 0.96521145, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "Falcon
-"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("56_qreph")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_font_sizes/font_size = 36
+text = "Sojuz"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RocketButton3" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa"]
 self_modulate = Color(1, 1, 0.2627451, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "Sojuz
-"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("57_gpbt2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_font_sizes/font_size = 36
+text = "Ariane"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RocketButton4" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa"]
-self_modulate = Color(0.6256368, 0.9143155, 0.65356135, 1)
+self_modulate = Color(0.6899344, 0.60440946, 0.93471, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "PSLV
-"
 
-[node name="Palivo" type="HBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("58_880y8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_font_sizes/font_size = 36
+text = "PSLV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Satelity" type="Panel" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.99200004
+offset_bottom = 0.023925781
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.81900007
+offset_bottom = -0.25946045
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="SateliteButton" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer"]
+self_modulate = Color(1, 0.57895267, 0.51213557, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("59_s2aov")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 36
+text = "Biomass"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_font_sizes/font_size = 22
+text = "Měří množství lesní biomasy a uhlíku ve vegetaci pomocí radaru."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SateliteButton2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer"]
+self_modulate = Color(0.2828208, 0.9492789, 0.96521145, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("60_t4vem")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 36
+text = "Galileo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_font_sizes/font_size = 22
+text = "Poskytuje velmi přesné určení polohy a času."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SateliteButton3" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer"]
+self_modulate = Color(1, 1, 0.2627451, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("61_k7brf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 36
+text = "Sentinel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_font_sizes/font_size = 22
+text = "Sleduje stav Země, klima, oceány a přírodní katastrofy."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SateliteButton4" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer"]
+self_modulate = Color(0.6899344, 0.60440946, 0.93471, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("62_w2e5y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 36
+text = "Meteosat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_font_sizes/font_size = 22
+text = "Sleduje počasí, oblačnost a bouře v téměř reálném čase."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SateliteChoose" type="NinePatchRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18400002
+anchor_top = 0.84400004
+anchor_right = 0.777
+anchor_bottom = 0.99300003
+offset_left = 0.463974
+offset_top = -0.074401855
+offset_right = -3.6330566
+offset_bottom = -0.09643555
+size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Infotext" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/SateliteChoose"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055000003
+anchor_top = 0.047000002
+anchor_right = 0.96300006
+anchor_bottom = 0.943
+offset_left = -0.065000534
+offset_top = -0.26599503
+offset_right = 0.17098999
+offset_bottom = 0.24597168
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.982948, 0.3268643, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Tento satelit není vhodný pro zvolenou misi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SatTimer" type="Timer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity"]
+wait_time = 1.5
+one_shot = true
+
+[node name="Palivo" type="Panel" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.48235294)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1497,73 +2034,348 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.5
-theme_override_constants/separation = 20
 
-[node name="FuelButton" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
-self_modulate = Color(1, 0.57895267, 0.51213557, 1)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
-text = "H2 + O2"
-
-[node name="FuelButton2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
-self_modulate = Color(0.2828208, 0.9492789, 0.96521145, 1)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
-text = "RP1 + O2"
-
-[node name="FuelButton3" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
-self_modulate = Color(1, 1, 0.2627451, 1)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
-text = "HTPB"
-
-[node name="Kosmodrom" type="HBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
-visible = false
+[node name="FuelButtonO2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+self_modulate = Color(0.2410537, 0.78480434, 0.9301008, 1)
 layout_mode = 0
+offset_left = 63.0
+offset_top = 98.600006
+offset_right = 326.0
+offset_bottom = 183.20001
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 40
+text = "kyslík"
+
+[node name="FuelButtonH2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+self_modulate = Color(0.42132393, 0.7994678, 0.6519361, 1)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 290.6
+offset_right = 326.0
+offset_bottom = 375.2
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 40
+text = "vodík"
+
+[node name="FuelButtonHTPB" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+self_modulate = Color(0.8410299, 0.6201155, 0.8844983, 1)
+layout_mode = 0
+offset_left = 904.0
+offset_top = 208.6
+offset_right = 1286.0
+offset_bottom = 349.6
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 40
+text = "jednosložkové palivo"
+autowrap_mode = 2
+
+[node name="FuelButtonRP1" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+self_modulate = Color(0.81153256, 0.7092038, 0.2925564, 1)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 444.6
+offset_right = 326.0
+offset_bottom = 529.2
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 40
+text = "petrolej"
+
+[node name="FuelButtonEnd" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+self_modulate = Color(1, 1, 0.2627451, 1)
+layout_mode = 0
+offset_left = 464.0
+offset_top = 570.6
+offset_right = 766.0
+offset_bottom = 655.6
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 40
+text = "Zvolit"
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 23.600006
+offset_right = 757.0
+offset_bottom = 280.2
+texture = ExtResource("63_pov6y")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 265.6
+offset_right = 522.24414
+offset_bottom = 403.6
+texture = ExtResource("64_4ey38")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 67.600006
+offset_right = 522.24414
+offset_bottom = 205.6
+texture = ExtResource("65_8cths")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 67.600006
+offset_right = 903.24414
+offset_bottom = 205.6
+texture = ExtResource("66_kw6pk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 335.6
+offset_right = 903.24414
+offset_bottom = 473.6
+texture = ExtResource("66_kw6pk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 421.6
+offset_right = 521.24414
+offset_bottom = 559.6
+texture = ExtResource("67_2prg8")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 292.6
+offset_right = 759.0
+offset_bottom = 549.2
+texture = ExtResource("63_pov6y")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 24.600006
+offset_right = 282.0
+offset_bottom = 76.600006
+theme_override_font_sizes/font_size = 28
+text = "okysličovadlo: "
+
+[node name="TopText" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 70.600006
+offset_right = 663.0
+offset_bottom = 125.600006
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "HTPB"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotText" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 336.6
+offset_right = 665.0
+offset_bottom = 391.6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "HTPB"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 214.6
+offset_right = 282.0
+offset_bottom = 266.6
+theme_override_font_sizes/font_size = 28
+text = "kapalné palivo: "
+
+[node name="Label3" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 13.600006
+offset_right = 940.0
+offset_bottom = 65.600006
+theme_override_font_sizes/font_size = 28
+text = "tuhé palivo: "
+
+[node name="FuelTimer" type="Timer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+one_shot = true
+
+[node name="SateliteChoose" type="NinePatchRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.66
+anchor_top = 0.75000006
+anchor_right = 1.014
+anchor_bottom = 1.0300001
+offset_left = -0.14001465
+offset_top = 0.1000061
+offset_right = 0.3939209
+offset_bottom = 0.25994873
+size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="FuelInfotext" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/SateliteChoose"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.982948, 0.3268643, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Tento satelit není vhodný pro zvolenou misi"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Kosmodrom" type="Panel" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.5
-theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 12.600006
+offset_right = 1292.0
+offset_bottom = 659.6
+texture = ExtResource("59_qreph")
 
 [node name="KosmoButton" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
 self_modulate = Color(1, 0.57895267, 0.51213557, 1)
-layout_mode = 2
+layout_mode = 0
+offset_left = 377.0
+offset_top = 280.6
+offset_right = 672.0
+offset_bottom = 410.6
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "KOUROU"
+icon = ExtResource("36_f7xtl")
 
 [node name="KosmoButton2" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
 self_modulate = Color(0.2828208, 0.9492789, 0.96521145, 1)
-layout_mode = 2
+layout_mode = 0
+offset_left = 101.0
+offset_top = 141.6
+offset_right = 506.0
+offset_bottom = 271.6
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "MYS CANAVERAL"
+icon = ExtResource("36_f7xtl")
+icon_alignment = 2
 
 [node name="KosmoButton3" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
 self_modulate = Color(1, 1, 0.2627451, 1)
-layout_mode = 2
+layout_mode = 0
+offset_left = 607.0
+offset_top = 78.600006
+offset_right = 937.0
+offset_bottom = 208.6
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "BAJKONUR"
+icon = ExtResource("36_f7xtl")
+icon_alignment = 2
 
 [node name="KosmoButton4" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
 self_modulate = Color(0.6256368, 0.9143155, 0.65356135, 1)
-layout_mode = 2
+layout_mode = 0
+offset_left = 859.0
+offset_top = 214.6
+offset_right = 1241.0
+offset_bottom = 344.6
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "SRIHARIKOTA
 "
+icon = ExtResource("36_f7xtl")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.209
+anchor_top = 0.78800005
+anchor_right = 0.799
+anchor_bottom = 0.93700004
+offset_left = 0.23898315
+offset_top = 0.3359375
+offset_right = 0.12890625
+offset_bottom = 0.31396484
+size_flags_horizontal = 3
+texture = ExtResource("16_dpwfp")
+region_rect = Rect2(-5.561249, -5.8399963, 564.90564, 405.30545)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Infotext" type="Label" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/NinePatchRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055000003
+anchor_top = 0.047000002
+anchor_right = 0.96300006
+anchor_bottom = 0.943
+offset_left = -0.065000534
+offset_top = -0.26599503
+offset_right = 0.17098999
+offset_bottom = 0.24597168
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.982948, 0.3268643, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Zvolenou raketu nelze vyslat z tohoto kosmodromu!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom"]
+one_shot = true
 
 [node name="Konec" type="HBoxContainer" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.395
+offset_top = 211.6
+offset_bottom = 211.39001
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -1571,17 +2383,28 @@ size_flags_stretch_ratio = 3.5
 theme_override_constants/separation = 20
 
 [node name="Again" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec"]
-self_modulate = Color(1, 0.57895267, 0.51213557, 1)
+self_modulate = Color(0.9334154, 0.51548326, 0.26149184, 1)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
 text = "Znovu"
 
-[node name="End" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec"]
-self_modulate = Color(0.83563393, 0.96347445, 0.6413719, 1)
+[node name="SatBuild" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec"]
+self_modulate = Color(0.64048696, 0.59981996, 0.86504513, 1)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 35
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
+text = "Postavit družici"
+
+[node name="End" type="Button" parent="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec"]
+self_modulate = Color(0.4408941, 0.8113896, 0.47607392, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_ydg44")
+theme_override_font_sizes/font_size = 60
 text = "Start Rakety"
 
 [node name="CompLib" type="Node" parent="."]
@@ -1615,6 +2438,11 @@ Comps = Array[ExtResource("21_wct6h")]([ExtResource("22_rq8wd"), ExtResource("23
 [connection signal="pressed" from="Game/MisionSelect/Container/HBoxContainer/VBoxContainer/Button_M_Sat" to="Game" method="_on_button_m_sat_pressed"]
 [connection signal="pressed" from="Game/SateliteBuilder/Control/ExitButton" to="Game" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Game/SateliteBuilder/Control/StartButton" to="Game" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Game/SateliteBuilder/Exit/exitYes" to="Game" method="_on_exit_yes_pressed"]
+[connection signal="pressed" from="Game/SateliteBuilder/Exit/exitNo" to="Game" method="_on_exit_no_pressed"]
+[connection signal="pressed" from="Game/SateliteBuilder/Finish/sendYes" to="Game" method="_on_send_yes_pressed"]
+[connection signal="pressed" from="Game/SateliteBuilder/Finish/sendNo" to="Game" method="_on_send_no_pressed"]
+[connection signal="pressed" from="Game/SateliteBuilder/Finish/sendRocket" to="Game" method="_on_send_rocket_pressed"]
 [connection signal="pressed" from="Game/EndScene/Panel/VBoxContainer/Panel3/HBoxContainer/Panel/EndBack" to="Game" method="_on_end_back_pressed"]
 [connection signal="pressed" from="Game/EndScene/Panel/VBoxContainer/Panel3/HBoxContainer/Panel2/EndAgain" to="Game" method="_on_end_again_pressed"]
 [connection signal="pressed" from="Game/EndScene/Panel/VBoxContainer/Panel3/HBoxContainer/Panel3/EndMision" to="Game" method="_on_end_mision_pressed"]
@@ -1622,12 +2450,22 @@ Comps = Array[ExtResource("21_wct6h")]([ExtResource("22_rq8wd"), ExtResource("23
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton2" to="Game/RocketBuilder" method="_on_rocket_button_2_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton3" to="Game/RocketBuilder" method="_on_rocket_button_3_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Raketa/RocketButton4" to="Game/RocketBuilder" method="_on_rocket_button_4_pressed"]
-[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButton" to="Game/RocketBuilder" method="_on_fuel_button_pressed"]
-[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButton2" to="Game/RocketBuilder" method="_on_fuel_button_2_pressed"]
-[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButton3" to="Game/RocketBuilder" method="_on_fuel_button_3_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton" to="Game/RocketBuilder" method="_on_satelite_button_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton2" to="Game/RocketBuilder" method="_on_satelite_button_2_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton3" to="Game/RocketBuilder" method="_on_satelite_button_3_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/HBoxContainer/SateliteButton4" to="Game/RocketBuilder" method="_on_satelite_button_4_pressed"]
+[connection signal="timeout" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Satelity/SatTimer" to="Game/RocketBuilder" method="_on_sat_timer_timeout"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButtonO2" to="Game/RocketBuilder" method="_on_fuel_button_o_2_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButtonH2" to="Game/RocketBuilder" method="_on_fuel_button_h_2_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButtonHTPB" to="Game/RocketBuilder" method="_on_fuel_button_htpb_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButtonRP1" to="Game/RocketBuilder" method="_on_fuel_button_rp_1_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelButtonEnd" to="Game/RocketBuilder" method="_on_fuel_button_end_pressed"]
+[connection signal="timeout" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Palivo/FuelTimer" to="Game/RocketBuilder" method="_on_fuel_timer_timeout"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/KosmoButton" to="Game/RocketBuilder" method="_on_kosmo_button_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/KosmoButton2" to="Game/RocketBuilder" method="_on_kosmo_button_2_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/KosmoButton3" to="Game/RocketBuilder" method="_on_kosmo_button_3_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/KosmoButton4" to="Game/RocketBuilder" method="_on_kosmo_button_4_pressed"]
+[connection signal="timeout" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Kosmodrom/Timer" to="Game/RocketBuilder" method="_on_timer_timeout"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec/Again" to="Game/RocketBuilder" method="_on_again_pressed"]
+[connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec/SatBuild" to="Game" method="_on_sat_build_pressed"]
 [connection signal="pressed" from="Game/RocketBuilder/Panel/VBoxContainer/HBoxContainer/Panel/Konec/End" to="Game" method="_on_end_pressed"]
